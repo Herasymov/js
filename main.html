@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>A film manager</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+  </head>
+  <body>
+  <div class="mblock">
+      <form onsubmit="return formSubmitted();">
+          <h1 style="text-align: center;">ADD NEW FILM</h1>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Film name" required>
+          <label for="year">Year</label>
+          <input type="number" id="year" name="year" placeholder="Film year" required>
+          <label for="director">Director</label>
+          <input type="text" id="director" name="director" placeholder="Film director" required>
+          <label for="actors_button">Actors</label>
+          <div id="act_inp"></div>
+          <input id="actors_button" name="actors_button" type="button" onclick="addInput('actors', 'act_inp', 'actor name')" value="Add Actors" />
+          <p></p>
+          <label for="platforms_button">Platforms</label>
+          <div id="platforms_inp"></div>
+          <input id="platforms_button" name="platforms_button" type="button" onclick="addInput('platforms', 'platforms_inp', 'available on')" value="Add Platform" />
+          <p></p>
+          <label for="pic">Image</label>
+          <input type="text" id="pic" name="pic" placeholder="Link to the image">
+          <input type="submit" value="Submit">
+       </form>
+  </div>
+  <div class="mblock">
+      <h1 style="text-align: center;">SEARCH INFO ABOUT FILM BY NAME</h1>
+      <form onsubmit="return formSearch();">
+          <fieldset>
+            <legend>Search</legend>
+            <label>
+
+             search
+             <input type="text" id="nameSearch" required>
+           </label>
+
+            <br>
+           <button>Search</button>
+            <br>
+            <div id="searchList"></div>
+            </fieldset>
+      </form>
+  </div>
+  <div class="mblock">
+      <h1 style="text-align: center;">ALL FILMS</h1>
+      <div id="films"></div>
+  </div>
+
+  </body>
+</html>
+
+   
+                 
+            
